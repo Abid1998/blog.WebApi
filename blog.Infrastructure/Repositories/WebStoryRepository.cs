@@ -21,9 +21,8 @@ namespace blog.Infrastructure.Repositories
         }
 
         /// <summary>
-        ///  update data
+        ///  update data Web Story 
         /// </summary>
-        
         public async Task<WebStoryDto> UpdateWebStoryAsync(int story_id, WebStoryUpdateDto dto)
         {
             var existingStory = await dbContext.TblWebStory.Include(ws => ws.Pages).FirstOrDefaultAsync(ws => ws.story_id == story_id);
