@@ -9,6 +9,8 @@
         ITagsRepository TagsRepository { get; }
         IWebStoryRepository WebStoryRepository { get; }
 
+        //IIdentityService IdentityService { get; }
+
         Task Save();
     }
 }
